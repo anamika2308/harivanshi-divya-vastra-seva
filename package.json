@@ -1,0 +1,30 @@
+{
+  "name": "harivanshi-poshak-seva",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "15.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "razorpay": "^2.9.2",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.383.0",
+    "react-hot-toast": "^2.4.1",
+    "sharp": "^0.33.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0"
+  }
+}

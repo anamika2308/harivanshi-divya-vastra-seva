@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Playfair+Display:wght@400;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+
+:root {
+  --saffron: #E8650A;
+  --gold: #C8920A;
+  --cream: #FDF8F0;
+  --deep: #4A1B0C;
+  --text: #2C2218;
+  --muted: #8B6914;
+  --border: #F0D080;
+  --card: #FFFDF5;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Nunito', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Product card backgrounds */
+.bg-c1 { background: linear-gradient(135deg, #FDE8D0, #F9C08A); }
+.bg-c2 { background: linear-gradient(135deg, #E8D5F5, #C9A8E8); }
+.bg-c3 { background: linear-gradient(135deg, #D0F0E8, #8ACFC0); }
+.bg-c4 { background: linear-gradient(135deg, #F5D0D0, #E8A0A0); }
+.bg-c5 { background: linear-gradient(135deg, #D0E8F5, #8AB8D8); }
+.bg-c6 { background: linear-gradient(135deg, #F5EBD0, #E8C87A); }
+
+/* Marquee animation */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  gap: 3rem;
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+}
+
+/* Pattern background */
+.hero-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F0D080' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Star rating */
+.star-filled { color: #F0D080; }
+.star-empty { color: #D4B896; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* Loading spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Status badges */
+.status-pending { background: #FEF3CC; color: #92400E; }
+.status-confirmed { background: #D1FAE5; color: #065F46; }
+.status-processing { background: #DBEAFE; color: #1E40AF; }
+.status-shipped { background: #EDE9FE; color: #5B21B6; }
+.status-delivered { background: #D1FAE5; color: #065F46; }
+.status-cancelled { background: #FEE2E2; color: #991B1B; }
+
+.payment-pending { background: #FEF3CC; color: #92400E; }
+.payment-paid { background: #D1FAE5; color: #065F46; }
+.payment-failed { background: #FEE2E2; color: #991B1B; }
