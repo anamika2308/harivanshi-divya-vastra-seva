@@ -259,7 +259,7 @@ export default function AdminSecurePage() {
         <div className="max-w-7xl mx-auto px-4 flex gap-1 overflow-x-auto">
           {[{id:'dashboard',label:'📊 Dashboard'},{id:'orders',label:'📦 Orders',count:pendingOrders},{id:'products',label:'🛍️ Products',count:0},{id:'reviews',label:'⭐ Reviews',count:pendingReviews}].map(t=>(
             <button key={t.id} onClick={()=>setTab(t.id as AdminTab)} className="flex items-center gap-2 px-4 py-3 text-sm font-semibold border-b-2 transition-all whitespace-nowrap" style={{borderColor:tab===t.id?'var(--saffron)':'transparent',color:tab===t.id?'var(--saffron)':'#6B7280'}}>
-              {t.label}{t.count>0&&<span className="text-xs px-1.5 py-0.5 rounded-full font-bold text-white" style={{background:'#EF4444'}}>{t.count}</span>}
+              {t.label}{(t.count ?? 0)>0&&<span className="text-xs px-1.5 py-0.5 rounded-full font-bold text-white" style={{background:'#EF4444'}}>{t.count}</span>}
             </button>
           ))}
         </div>
